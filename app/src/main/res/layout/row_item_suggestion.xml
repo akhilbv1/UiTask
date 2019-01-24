@@ -18,16 +18,37 @@
             android:orientation="vertical"
             tools:ignore="MissingPrefix">
 
-        <ImageView
+        <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="130dp"
-                android:layout_margin="5dp"
-                android:layout_gravity="center"
-                android:src="@drawable/stock_2"
-                android:scaleType="centerCrop"
-                android:adjustViewBounds="true"/>
+                android:layout_height="130dp">
+
+            <ImageView
+                    android:id="@+id/ivFoodLogo"
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    android:layout_margin="5dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/stock_2"
+                    android:scaleType="centerCrop"
+                    android:adjustViewBounds="true"/>
+
+            <TextView
+                    android:id="@+id/tvBestSeller"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/red_tag"
+                    android:layout_gravity="center|start"
+                    android:text="BEST SELLER"
+                    android:padding="2dp"
+                    android:textSize="12sp"
+                    android:layout_marginBottom="20dp"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/amiko"/>
+
+        </FrameLayout>
 
         <TextView
+                android:id="@+id/tvFoodTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Hot Samosas with chutney"
@@ -38,6 +59,7 @@
                 android:fontFamily="@font/amiko_bold"/>
 
         <TextView
+                android:id="@+id/tvRestName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Pista House"
@@ -50,6 +72,7 @@
                 android:textColor="@color/gray_color2"/>
 
         <TextView
+                android:id="@+id/tvPrice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="$ 25 per price"
@@ -65,6 +88,7 @@
         />
 
         <TextView
+                android:id="@+id/tvTime"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="30 min"
@@ -76,7 +100,8 @@
                 android:textSize="14sp"
                 android:textStyle="bold"
                 android:fontFamily="@font/amiko"
-                android:drawableLeft="@drawable/ic_access_time_black_24dp"
+                android:drawablePadding="2dp"
+                android:drawableStart="@drawable/ic_access_time_black_24dp"
                 android:textColor="@color/background_gray_darkest"
         />
 
@@ -87,11 +112,14 @@
                 android:layout_height="match_parent">
 
             <TextView
+                    android:id="@+id/tvRating"
                     android:layout_weight="0.7"
                     android:text="3.5"
+                    android:drawableStart="@drawable/ic_star_black_24dp"
                     android:textSize="18sp"
                     android:textColor="@color/light_green"
-                    android:gravity="center_vertical|bottom"
+                    android:gravity="center|start"
+                    android:layout_marginTop="20dp"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"/>
 

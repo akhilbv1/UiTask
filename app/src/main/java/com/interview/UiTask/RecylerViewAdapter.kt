@@ -6,12 +6,12 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
-class RecylerViewAdapter : RecyclerView.Adapter<RecylerViewAdapter.ViewHolder>() {
+class RecylerViewAdapter(val homeList:List<HomePojo>) : RecyclerView.Adapter<RecylerViewAdapter.ViewHolder>() {
 
     private var viewPool:RecyclerView.RecycledViewPool = RecyclerView.RecycledViewPool()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.row_item_home_list, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.row_item_home, parent, false)
         return ViewHolder(view)
     }
 
@@ -25,11 +25,11 @@ class RecylerViewAdapter : RecyclerView.Adapter<RecylerViewAdapter.ViewHolder>()
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
       private val rvHomeList:RecyclerView = itemView.findViewById(R.id.rvHomeList)
-
-        init {
+        private
+        fun updateUi(){
             rvHomeList.apply {
                 layoutManager = LinearLayoutManager(itemView.context,LinearLayoutManager.HORIZONTAL,false)
-                adapter = NestedRecyclerViewAdapter()
+                adapter = NestedRecyclerViewAdapter(homeList)
             }
             rvHomeList.setRecycledViewPool(viewPool)
         }
