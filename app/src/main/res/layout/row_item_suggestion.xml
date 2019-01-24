@@ -4,8 +4,8 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:id="@+id/cvFeed"
-        android:layout_width="250dp"
-        android:layout_height="300dp"
+        android:layout_width="200dp"
+        android:layout_height="250dp"
         android:layout_margin="8dp"
         android:background="@android:color/white"
         app:cardCornerRadius="3dp"
@@ -20,16 +20,16 @@
 
         <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="130dp">
+                android:layout_height="100dp">
 
             <ImageView
                     android:id="@+id/ivFoodLogo"
-                    android:layout_width="match_parent"
-                    android:layout_height="130dp"
-                    android:layout_margin="5dp"
+                    android:layout_width="200dp"
+                    android:layout_height="100dp"
                     android:layout_gravity="center"
                     android:src="@drawable/stock_2"
-                    android:scaleType="centerCrop"
+                    android:scaleX="1.4"
+                    android:scaleY="1.4"
                     android:adjustViewBounds="true"/>
 
             <TextView
@@ -39,8 +39,8 @@
                     android:background="@drawable/red_tag"
                     android:layout_gravity="center|start"
                     android:text="BEST SELLER"
-                    android:padding="2dp"
-                    android:textSize="12sp"
+                    android:padding="4dp"
+                    android:textSize="10sp"
                     android:layout_marginBottom="20dp"
                     android:textColor="@color/white"
                     android:fontFamily="@font/amiko"/>
@@ -51,10 +51,10 @@
                 android:id="@+id/tvFoodTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Hot Samosas with chutney"
-                android:layout_margin="5dp"
+               android:layout_margin="5dp"
                 android:textStyle="bold"
-                android:textSize="18sp"
+                android:textSize="15sp"
+                android:minLines="2"
                 android:textColor="@color/black"
                 android:fontFamily="@font/amiko_bold"/>
 
@@ -62,26 +62,27 @@
                 android:id="@+id/tvRestName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Pista House"
+                tools:text="Pista House"
                 android:layout_marginLeft="5dp"
                 android:layout_marginStart="5dp"
                 android:layout_marginRight="5dp"
                 android:layout_marginEnd="5dp"
                 android:layout_marginBottom="2dp"
-                android:textSize="14sp"
-                android:textColor="@color/gray_color2"/>
+                android:textSize="12sp"
+                android:fontFamily="@font/amiko"
+                android:textColor="@color/gray_color"/>
 
         <TextView
                 android:id="@+id/tvPrice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="$ 25 per price"
+                tools:text="$ 25 per price"
                 android:layout_marginTop="1dp"
                 android:layout_marginLeft="5dp"
                 android:layout_marginStart="5dp"
                 android:layout_marginRight="5dp"
                 android:layout_marginEnd="5dp"
-                android:textSize="14sp"
+                android:textSize="12sp"
                 android:textStyle="bold"
                 android:fontFamily="@font/amiko"
                 android:textColor="@color/background_gray_darkest"
@@ -91,35 +92,35 @@
                 android:id="@+id/tvTime"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="30 min"
+                tools:text="30 min"
                 android:layout_marginTop="1dp"
                 android:layout_marginLeft="5dp"
                 android:layout_marginStart="5dp"
                 android:layout_marginRight="5dp"
                 android:layout_marginEnd="5dp"
-                android:textSize="14sp"
+                android:textSize="12sp"
                 android:textStyle="bold"
                 android:fontFamily="@font/amiko"
                 android:drawablePadding="2dp"
-                android:drawableStart="@drawable/ic_access_time_black_24dp"
+                android:drawableStart="@drawable/ic_time"
                 android:textColor="@color/background_gray_darkest"
         />
 
         <LinearLayout
                 android:orientation="horizontal"
-                android:layout_margin="5dp"
+                android:layout_margin="2dp"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
             <TextView
                     android:id="@+id/tvRating"
                     android:layout_weight="0.7"
-                    android:text="3.5"
+                    tools:text="3.5"
                     android:drawableStart="@drawable/ic_star_black_24dp"
-                    android:textSize="18sp"
+                    android:textSize="12sp"
                     android:textColor="@color/light_green"
                     android:gravity="center|start"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="8dp"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"/>
 
@@ -129,7 +130,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:textColor="@color/white"
-                    android:textSize="17sp"
+                    android:textSize="14sp"
                     android:background="@drawable/rounded_button"
             />
 

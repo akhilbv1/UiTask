@@ -1,3 +1,3 @@
 package com.interview.UiTask
 
-data class HomePojo(val offersPojo: OffersPojo? = null,val suggestionPojo: SuggestionPojo? = null ,val type:Int)
+data class HomePojo(val offerss: List<OffersPojo>?=null ,val suggestionPojo: List<SuggestionPojo>?=null,val type:Int)
